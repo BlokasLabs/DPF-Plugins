@@ -60,6 +60,8 @@ ifeq ($(HAVE_PROJM),true)
 endif # HAVE_PROJM
 endif # HAVE_CAIRO_OR_OPENGL
 
+	cp -r modguis/* bin/
+
 ifneq ($(CROSS_COMPILING),true)
 gen: plugins dpf/utils/lv2_ttl_generator
 	@$(CURDIR)/dpf/utils/generate-ttl.sh
